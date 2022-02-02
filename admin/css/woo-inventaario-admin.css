@@ -1,0 +1,45 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.toplevel_page_inventaario_woocommerce th {
+	text-align: left;
+	border-bottom: 2px solid #000;
+	padding: 8px 0;
+	min-width: 100px;
+}
+.toplevel_page_inventaario_woocommerce button#windowprintBtn {
+	cursor: pointer;
+    margin: 40px;
+    border: 2px solid #006ba1;
+    border-radius: 10px;
+    padding: 13px 26px;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    background: #006ba1;
+    color: #FFF;
+	transition: .3s;
+}
+.toplevel_page_inventaario_woocommerce button#windowprintBtn:hover {
+    background: #FFF;
+    color: #006ba1;
+}
+
+/*
+ * 	PRINTING CSS
+ */
+@media print {
+	/* Adminmenuback, adminmenuwrap, wp-footer, windowprintBtn*/
+	.no-print #adminmenuback,
+    .no-print #adminmenuwrap,
+    .no-print #wpfooter,
+    .no-print #windowprintBtn {
+		display: none;
+	}
+	/* Remove margin from content */
+	.no-print #wpcontent {
+		margin: unset;
+	}
+}
